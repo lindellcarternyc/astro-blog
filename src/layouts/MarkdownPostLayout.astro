@@ -1,18 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
-interface MarkdownPostLayoutProps {
-  frontmatter: {
-    title: string;
-    pubDate: string;
-    author: string;
-    description: string;
-    image: {
-      url: string;
-      alt: string;
-    }
-  }
-}
+import type { Post } from "../interfaces/post"
+
+type MarkdownPostLayoutProps = Post;
 
 const { frontmatter } = Astro.props as MarkdownPostLayoutProps;
 ---
