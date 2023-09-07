@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import type { Post } from "../../interfaces/post";
+import { getUniqueTags } from "../../utils/posts";
+
+import Tags from "../../components/Tags.astro";
+
+const pageTitle = "Tags";
+
+const allPosts = await Astro.glob('../posts/*.md') as Post[];
+const tags = getUniqueTags(allPosts);
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <Tags tags={tags} />
+</BaseLayout>

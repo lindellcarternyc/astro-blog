@@ -9,5 +9,6 @@ export interface Post {
       url: string;
       alt: string;
     };
+    tags?: string[];
   };
 }
