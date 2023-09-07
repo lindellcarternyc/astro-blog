@@ -16,7 +16,7 @@ const identity = {
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"] as const;
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "navy" as const;
@@ -26,7 +26,7 @@ const textCase = "uppercase" as const;
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>... and my new Astro site!</h2>
-	<p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+	<p>I have working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
 
 	<p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
 
@@ -47,5 +47,5 @@ const textCase = "uppercase" as const;
 
 	{finished && <p>I finished this tutorial!</p>}
 
-	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+	<p>My goal was to finish in {goal} days. I finished in one afternoon!</p>
 </BaseLayout>
